@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     margin:14,
     padding: 1,
     width: 250,
-    marginLeft: -50,
+    marginStart: "-10%",
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

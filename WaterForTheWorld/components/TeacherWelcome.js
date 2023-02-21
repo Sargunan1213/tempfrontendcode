@@ -33,7 +33,7 @@ export default function TeacherWelcome({ navigation }) {
             placeholderTextColor={'#999999'} 
             onChangeText={codeInputHandler} 
             value={enteredHRCode} />
-        <Button title='ADD' color={'#9ED9D4'} onPress={clickJoinHandler} />
+        <Button title='CREATE' color={'#9ED9D4'} onPress={clickJoinHandler} />
       </View>
 
       <View flex = '7'>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     margin:14,
     padding: 1,
     width: 250,
-    marginLeft: -50,
+    marginStart: "-20%",
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
