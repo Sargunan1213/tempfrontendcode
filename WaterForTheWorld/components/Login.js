@@ -18,7 +18,7 @@ export default function Login({ navigation }) {
         label = "User name"
       />
       <View style = {styles.inputview}>
-        <Pressable style={styles.button} onPress={() => {}}>
+        <Pressable style={styles.button} onPress={() => navigation.navigate("Student welcome")}>
           <Text style={styles.textButton}>
             Get Started
           </Text>

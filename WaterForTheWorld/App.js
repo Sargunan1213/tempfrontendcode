@@ -8,6 +8,8 @@ import SignIn from './components/SignIn';
 import TeacherSignup from './components/TeacherSignup';
 import StudentSignup from './components/StudentSignup';
 import Login from './components/Login';
+import StudentWelcome from './components/StudentWelcome';
+import TeacherWelcome from './components/TeacherWelcome';
 
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +24,8 @@ export default function App() {
           <Stack.Screen name="Teacher signup" component={TeacherSignup} />
           <Stack.Screen name="Student signup" component={StudentSignup} />
           <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Student welcome" component={StudentWelcome} />
+          <Stack.Screen name="Teacher welcome" component={TeacherWelcome} />
         </Stack.Navigator>
       </NavigationContainer>
     

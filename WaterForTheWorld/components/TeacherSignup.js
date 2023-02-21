@@ -33,7 +33,7 @@ export default function TeacherSignup({ navigation }) {
         placeholderTextColor={'#03DAC5'}
       />
       <View style = {styles.inputview}>
-        <Pressable style={styles.button} onPress={() => {}}>
+        <Pressable style={styles.button} onPress={() => navigation.navigate("Teacher welcome")}>
           <Text style={styles.textButton}>
             Get Started
           </Text>
