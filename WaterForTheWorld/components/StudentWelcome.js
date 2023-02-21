@@ -2,11 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Dimensions, FlatList } from 'react-native';
 
-export default function StudentWelcome({ navigation }) {
+export default function TeacherWelcome({ navigation }) {
   const [enteredHRCode, setEnteredHRCode] = useState('');
   const [hrList, setHRList] = useState([]);
-
-//   function viewHrHandler() {};
 
   function codeInputHandler(enteredText) {
     setEnteredHRCode(enteredText);
@@ -21,15 +19,12 @@ export default function StudentWelcome({ navigation }) {
 
   return (
     <View style={styles.background}>
-      <View flex='1' paddingTop = '20%'>
-        <Text 
-          style={{fontSize: '28',
-          color: '#9ED9D4',
-          fontWeight: 'bold'}}>
+      <View style={styles.welcomeContainer}>
+        <Text style={styles.welcomeText}>
             Welcome Student! </Text>
       </View> 
 
-      <View flex='1' style={styles.inputContainer}>
+      <View style={styles.inputContainer}>
         <TextInput style={styles.textInput} 
             placeholder='Type homeroom code to add...' 
             placeholderTextColor={'#999999'} 
@@ -38,9 +33,8 @@ export default function StudentWelcome({ navigation }) {
         <Button title='ADD' color={'#9ED9D4'} onPress={clickJoinHandler} />
       </View>
 
-      <View flex = '7'>
-        
-        <Text style={{fontSize: '20', color:'#9ED9D4', paddingLeft: 5}}>Your Homeroom List</Text>
+      <View style={styles.listContainer}>
+        <Text style={styles.listText}>Your Homeroom List</Text>
         
         <FlatList data={hrList} renderItem={(itemData) => {
           return (
@@ -54,7 +48,7 @@ export default function StudentWelcome({ navigation }) {
         }} alwaysBounceVertical={false}/>
       </View>
 
-      <View flex = '2' >
+      <View style={styles.skipContainer}>
         <Button title='SKIP TO SIMULATION'color={'#9ED9D4'} />
       </View>
       
@@ -89,8 +83,9 @@ const styles = StyleSheet.create({
   inputContainer: {
     margin:14,
     padding: 1,
+    flex: 1,
     width: 250,
-    marginStart: "-10%",
+    marginStart: "-20%",
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -106,6 +101,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#AFEFEA',
     alignItems: 'center',
   },
+  listContainer: {
+    flex: 7,
+  },
+  listText:{
+    fontSize:20,
+    color:'#9ED9D4',
+    paddingLeft: 5
+  },
   codeItem: {
     margin: 6,
     padding: 6, 
@@ -115,6 +118,18 @@ const styles = StyleSheet.create({
   },
   codeText: {
     color: 'white',
+  },
+  welcomeText: {
+    fontSize:28,
+    color: '#9ED9D4',
+    fontWeight: 'bold'
+  },
+  welcomeContainer: {
+    flex: 1,
+    paddingTop: '20%',
+  },
+  skipContainer: {
+    flex: 2
   },
   bold: {fontWeight: 'bold'},
   italic: {fontStyle: 'italic'},
