@@ -31,6 +31,14 @@ export default function SignIn({ navigation }) {
           <Icon name='angle-right' color='#03DAC5' size={15}/>
         </View>
       </Pressable>
+      <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire")}>
+        <Text style={styles.textButton}>
+          Pre-Questionnaire
+        </Text>
+        <View style={styles.arrow} >
+          <Icon name='angle-right' color='#03DAC5' size={15}/>
+        </View>
+      </Pressable>
     </View>
   );
 }

@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Intro from './components/Intro';
 import SignIn from './components/SignIn';
+import PreQ from './components/PreQ';
 import TeacherSignup from './components/TeacherSignup';
 import StudentSignup from './components/StudentSignup';
 import Login from './components/Login';
@@ -21,6 +22,7 @@ export default function App() {
         <Stack.Navigator screenOptions={{headerShown: false}}>
           <Stack.Screen name="Intro" component={Intro}/>
           <Stack.Screen name="Sign in" component={SignIn} />
+          <Stack.Screen name="Pre questionnaire" component={PreQ}/>
           <Stack.Screen name="Teacher signup" component={TeacherSignup} />
           <Stack.Screen name="Student signup" component={StudentSignup} />
           <Stack.Screen name="Login" component={Login} />

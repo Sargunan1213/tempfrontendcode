@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput, Dimensions, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, Dimensions, FlatList, Pressable } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default function TeacherWelcome({ navigation }) {
   const [enteredHRCode, setEnteredHRCode] = useState('');
@@ -49,7 +50,14 @@ export default function TeacherWelcome({ navigation }) {
       </View>
 
       <View style={styles.skipContainer}>
-        <Button title='SKIP TO SIMULATION'color={'#9ED9D4'} />
+        <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire")}>
+          <Text style={styles.textButton}>
+            Skip to Pre-Questionnaire
+          </Text>
+          <View style={styles.arrow} >
+            <Icon name='angle-right' color='#03DAC5' size={15}/>
+          </View>
+        </Pressable>
       </View>
       
       <StatusBar style="auto" />
@@ -133,6 +141,30 @@ const styles = StyleSheet.create({
   },
   bold: {fontWeight: 'bold'},
   italic: {fontStyle: 'italic'},
-  underline: {textDecorationLine: 'underline'},
+  underline: {textDecorationLine: 'underline'
+  },
+  button2: {
+    width:  Dimensions.get('window').width / 2,
+    flexDirection: 'row',
+    padding: 12,
+    // marginLeft: Dimensions.get('window').width / -26,
+    // marginTop: Dimensions.get('window').height / -30,
+    borderColor: '#03DAC5',
+    borderRadius: 999,
+    borderWidth: 2,
+    backgroundColor: '#2C2C2C',
+    alignItems: 'center',
+  },
+  arrow:{
+    flex: 1,
+    marginTop: 2
+  },
+  textButton:{
+    color: '#03DAC5',
+    textAlign:'center',
+    fontSize:14,
+    fontWeight: 'bold',
+    flex: 5
+  },
 
 });
