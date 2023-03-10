@@ -22,7 +22,7 @@ export default function App() {
         <Stack.Navigator screenOptions={{headerShown: false}}>
           <Stack.Screen name="Intro" component={Intro}/>
           <Stack.Screen name="Sign in" component={SignIn} />
-          <Stack.Screen name="Pre questionnaire" component={PreQ}/>
+          <Stack.Screen name="Pre questionnaire 1" component={PreQ}/>
           <Stack.Screen name="Teacher signup" component={TeacherSignup} />
           <Stack.Screen name="Student signup" component={StudentSignup} />
           <Stack.Screen name="Login" component={Login} />

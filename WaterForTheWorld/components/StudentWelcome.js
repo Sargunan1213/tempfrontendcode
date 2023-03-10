@@ -50,7 +50,7 @@ export default function TeacherWelcome({ navigation }) {
       </View>
 
       <View style={styles.skipContainer}>
-        <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire")}>
+        <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire 1")}>
           <Text style={styles.textButton}>
             Skip to Pre-Questionnaire
           </Text>
