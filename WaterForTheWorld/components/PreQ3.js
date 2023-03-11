@@ -9,16 +9,15 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 
 
-export default function PreQ2({ navigation }) {
+export default function PreQ3({ navigation }) {
     const [range, setRange] = useState('0');
     const [modalVisible, setModalVisible] = useState(false);
 
     return (
         <View style={styles.background}>
-            <Text style={styles.textCaption}>Clean Water Access</Text>
+            <Text style={styles.textCaption}>Extreme Poverty</Text>
             <Text style={styles.subtext}>
-                There are nearly 80 billion people in the world.
-                How many don’t have access to clean drinking water in their home?
+                How many people in the world live on less than $2.50 a day?
             </Text>
             <Text style={styles.sliderText}>{range}</Text>
             <Modal
@@ -30,7 +29,9 @@ export default function PreQ2({ navigation }) {
                 }}>
                 <View style={styles.centeredView}>
                     <View style={styles.modalContainer}>
-                        <Text> 800 million people - 1 in 10 of the world’s population - don’t have clean drinking water within a 30-minute trip from their home and 1 in 4 (2 billion!) don’t have it in their home {'\n'}</Text>
+                        <Text style={styles.answerView}> 1 Billion people in the world live in Extreme Poverty; over 1 in 8 people in the world, many of them children. {'\n\n'}
+                            Think about what you could buy with $2.50 – what could you eat and how would your or your parents be able to pay your rent? {'\n'}
+                        </Text>
                         <Pressable style={styles.button2} numberOfLines={1} onPress={()=> {setModalVisible(!modalVisible)}}>
                             <Text style={styles.textButton}>Learned</Text>
                         </Pressable>
@@ -40,7 +41,7 @@ export default function PreQ2({ navigation }) {
             <Slider
                 style= {{width:300, height:50}}
                 thumbTintColor= '#03DAC5'
-                onValueChange={value=>setRange(parseInt(value*999) + " " + "million")}
+                onValueChange={value=>setRange(parseInt(value*8) + " " + "billion")}
                 minimumValue={0}
                 maximumValue={1}
                 value={0}
@@ -48,7 +49,7 @@ export default function PreQ2({ navigation }) {
             />
             
             <View style={styles.skipContainer}>
-                <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire 3")}>
+                <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire 2")}>
                     <Text style={styles.textButton}>
                         Next
                     </Text>
@@ -147,5 +148,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 5,
+      },
+      answerView: {
+        textAlign: 'center',
       },
 });
