@@ -40,7 +40,11 @@ export default function TeacherWelcome({ navigation }) {
         <FlatList data={hrList} renderItem={(itemData) => {
           return (
             <View style={styles.codeItem}>
-              <Text style={styles.codeText}>{itemData.item.text}</Text>
+              <Pressable onPress={() => navigation.navigate("Teacher hr")}>
+                <Text style={styles.codeText}>
+                  {itemData.item.text}
+                </Text>
+              </Pressable>
             </View>
           );
         }}
@@ -50,7 +54,7 @@ export default function TeacherWelcome({ navigation }) {
       </View>
 
       <View style={styles.skipContainer}>
-        <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire")}>
+        <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire 1")}>
             <Text style={styles.textButton}>
               Skip to Pre-Questionnaire
             </Text>
