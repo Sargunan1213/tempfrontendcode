@@ -49,7 +49,7 @@ export default function PreQ3({ navigation }) {
             />
             
             <View style={styles.skipContainer}>
-                <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Pre questionnaire 2")}>
+                <Pressable style={styles.button2} numberOfLines={1} onPress={() => navigation.navigate("Game")}>
                     <Text style={styles.textButton}>
                         Next
                     </Text>
