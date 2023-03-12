@@ -10,7 +10,6 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 export default function PreQ({ navigation }) {
     return (
         <View style={styles.background}>
-            <Ionicons name='water-sharp' color='#03DAC5' size={50} style={styles.icon} />
             <Text style={styles.textCaption}>Introduction</Text>
             <Text style={styles.subtext}>The Water for the World Workshop introduces participants to the issues of clean water access and how local economy, geography and literacy are all connected. Using this app, you will try to build a water filter to access clean water for yourself!</Text>
 
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
     },
     textCaption: {
         color: '#03DAC5',
-        // marginTop: Dimensions.get('window').height / 8,
+        marginTop: Dimensions.get('window').height / 8,
         height: Dimensions.get('window').height/7,
         textAlign: 'center',
         fontSize: 30,

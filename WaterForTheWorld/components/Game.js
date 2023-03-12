@@ -175,7 +175,16 @@ export default function Game({ navigation }) {
             </Pressable>
           </ScrollView>
         </View>
-        
+        <View style={styles.buttonLayer}>
+          <Pressable style={styles.button2} onPress={() => navigation.navigate("Post questionnaire 1")}>
+            <Text style={styles.textButton}>
+              Next
+            </Text>
+            <View style={styles.arrow}>
+              <Icon name='angle-right' color='#03DAC5' size={15}/>
+            </View>
+          </Pressable>
+        </View>
     </View>
   );
 }
@@ -255,21 +264,22 @@ const styles = StyleSheet.create({
   textButton:{
     color: '#03DAC5',
     textAlign:'center',
-    fontSize:17,
+    fontSize:14,
     fontWeight: 'bold',
     flex: 5
   },
   button2: {
-    // borderColor: '#03DAC5'
-    // height: '75%',
-    // paddingTop: 15,
-    // paddingLeft: 20,
-    // paddingRight: 20,
-    // marginLeft: 30,
-    // borderColor: 'transparent',
-    // borderRadius: 999,
-    // borderWidth: 2,
-    // backgroundColor: '#2C2C2C'
+    width:  Dimensions.get('window').width / 3,
+    flexDirection: 'row',
+    padding: 12,
+    borderColor: '#03DAC5',
+    borderRadius: 999,
+    borderWidth: 2,
+    backgroundColor: '#2C2C2C'
+  },
+  buttonLayer:{
+    flex: 1,
+    marginTop: -Dimensions.get('window').height*1/20,
   },
   button: {
     height: '75%',
@@ -285,5 +295,9 @@ const styles = StyleSheet.create({
   image:{
     height: '99%',
     width: '99%'
+  },
+  arrow:{
+    flex: 1,
+    marginTop: 2
   }
 });

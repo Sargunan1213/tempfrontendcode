@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   text:{
     color: '#03DAC5',
-    marginTop: Dimensions.get('window').height/6,
+    marginTop: Dimensions.get('window').height/12,
     textAlign:'center',
     fontSize:30,
     fontWeight: 'bold',

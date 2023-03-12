@@ -30,7 +30,7 @@ export default function PreQ2({ navigation }) {
                 }}>
                 <View style={styles.centeredView}>
                     <View style={styles.modalContainer}>
-                        <Text> 800 million people - 1 in 10 of the world’s population - don’t have clean drinking water within a 30-minute trip from their home and 1 in 4 (2 billion!) don’t have it in their home {'\n'}</Text>
+                        <Text style ={ styles.text}> 800 million people - 1 in 10 of the world’s population - don’t have clean drinking water within a 30-minute trip from their home and 1 in 4 (2 billion!) don’t have it in their home {'\n'}</Text>
                         <Pressable style={styles.button2} numberOfLines={1} onPress={()=> {setModalVisible(!modalVisible)}}>
                             <Text style={styles.textButton}>Learned</Text>
                         </Pressable>
@@ -97,8 +97,8 @@ const styles = StyleSheet.create({
     skipContainer: {
         flex: 2,
         marginTop: Dimensions.get('window').height/4,
-      },
-      button2: {
+    },
+    button2: {
         width:  Dimensions.get('window').width / 2,
         flexDirection: 'row',
         padding: 12,
@@ -107,12 +107,12 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         backgroundColor: '#2C2C2C',
         alignItems: 'center',
-      },
-      arrow:{
+    },
+    arrow:{
         flex: 1,
         marginTop: 2
-      },
-      textButton:{
+    },
+    textButton:{
         color: '#03DAC5',
         textAlign:'center',
         fontSize:14,
@@ -120,22 +120,22 @@ const styles = StyleSheet.create({
         flex:5,
         // marginTop: Dimensions.get('window').height/2,
 
-      },
-      sliderText:{
+    },
+    sliderText:{
         fontSize:40,
         fontWeight: 'bold',
         color:'#03DAC5',
         // height: Dimensions.get('window').height/2,
-      },
-      centeredView: {
+    },
+    centeredView: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 22,
-      },
-      modalContainer: {
+        // marginTop: ,
+    },
+    modalContainer: {
         margin: 20,
-        backgroundColor: 'white',
+        backgroundColor: '#2C2C2C',
         borderRadius: 20,
         padding: 35,
         alignItems: 'center',
@@ -147,5 +147,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 5,
-      },
+    },
+    text: {
+        color: '#03DAC5',
+    }
 });
