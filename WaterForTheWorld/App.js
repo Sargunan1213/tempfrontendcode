@@ -13,6 +13,8 @@ import StudentWelcome from './components/StudentWelcome';
 import TeacherWelcome from './components/TeacherWelcome';
 import PreQ2 from './components/PreQ2';
 import PreQ3 from './components/PreQ3';
+import StudentHR from './components/StudentHR';
+import TeacherHR from './components/TeacherHR';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +33,8 @@ export default function App() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Student welcome" component={StudentWelcome} />
           <Stack.Screen name="Teacher welcome" component={TeacherWelcome} />
+          <Stack.Screen name="Student hr" component={StudentHR} />
+          <Stack.Screen name="Teacher hr" component={TeacherHR} />
         </Stack.Navigator>
       </NavigationContainer>
     

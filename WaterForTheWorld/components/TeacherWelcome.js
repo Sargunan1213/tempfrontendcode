@@ -40,7 +40,11 @@ export default function TeacherWelcome({ navigation }) {
         <FlatList data={hrList} renderItem={(itemData) => {
           return (
             <View style={styles.codeItem}>
-              <Text style={styles.codeText}>{itemData.item.text}</Text>
+              <Pressable onPress={() => navigation.navigate("Teacher hr")}>
+                <Text style={styles.codeText}>
+                  {itemData.item.text}
+                </Text>
+              </Pressable>
             </View>
           );
         }}
